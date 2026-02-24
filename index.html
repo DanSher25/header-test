@@ -408,9 +408,9 @@
     height: 63px;
 }
 
-body::after {
-    content: "";
-    background: #061d45;
+
+.page-overlay {
+   background: #061d45;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -422,11 +422,9 @@ body::after {
     transition: opacity 0.8s ease 0s;
     pointer-events: none;
     z-index: 149;
-    will-change: opacity;
-    transform: translateZ(0);
 }
 
-.popup-show body::after {
+.popup-show .page-overlay {
     opacity: 1;
 }
 
@@ -525,6 +523,7 @@ body::after {
         </div>
       </div>
     </header>
+    <div class="page-overlay"></div>
     <main style="height: 2000px; background-color: yellow;">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, repudiandae sed quidem cupiditate minus reprehenderit dolores deleniti, libero minima
       odit officiis consectetur mollitia sunt. Suscipit odit quidem molestiae asperiores nam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
